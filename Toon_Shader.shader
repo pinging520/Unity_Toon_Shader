@@ -45,8 +45,6 @@ Shader "Custom/Toon_Shader"
             }
 
             float4 frag(v2f v): SV_Target {
-                
-                
                 float3 lightSrc = normalize(_WorldSpaceLightPos0.xyz);
                 float diff = dot(lightSrc,v.normal);
                 //return diff>_cross?_FrontColor:_BackColor;
